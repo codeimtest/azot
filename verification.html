@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>AZOT - Авторизация</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<script src="libs/jquery/jquery-3.6.0.min.js" defer></script>
+	<script src="libs/input-mask/jquery.maskedinput.min.js" defer></script>
+
+	<script src="js/common.js" defer></script>
+
+</head>
+
+<body class="verification-page">
+
+
+<div class="app">
+	<header>
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col">
+					<div class="d-flex align-items-center">
+						<a href="/" class="logo">
+							<img src="images/logo.svg">
+						</a>
+						<div class="city_choice">
+							<div class="city_choice_current">Менделеевск</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row justify-content-center align-items-center">
+						<nav>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="images/icons/grid.svg">
+										<span>Каталог</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="images/icons/support.svg">
+										<span>Помощь</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col">
+					<div class="d-flex align-items-center justify-content-end">
+						<!-- <a href="#" class="btn">Вернуться на главную</a> -->
+						<div class="header-widget d-flex align-items-center">
+							<div class="cart_toggle">
+								<svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M19.5707 5.5125C19.5003 5.43018 19.4129 5.36408 19.3145 5.31877C19.2161 5.27345 19.109 5.24999 19.0007 5.25H14.5007V2.25C14.5007 1.65326 14.2636 1.08097 13.8417 0.65901C13.4197 0.237053 12.8474 0 12.2507 0H7.75068C7.15394 0 6.58165 0.237053 6.15969 0.65901C5.73773 1.08097 5.50068 1.65326 5.50068 2.25V5.25H1.00068C0.891965 5.24877 0.784281 5.27119 0.685091 5.31571C0.5859 5.36022 0.497575 5.42578 0.426233 5.50782C0.354892 5.58986 0.302241 5.68643 0.271928 5.79084C0.241615 5.89526 0.234365 6.00501 0.25068 6.1125L1.66068 15.225C1.71492 15.5827 1.89661 15.9087 2.17225 16.143C2.4479 16.3773 2.79893 16.5041 3.16068 16.5H16.8557C17.2174 16.5041 17.5685 16.3773 17.8441 16.143C18.1198 15.9087 18.3014 15.5827 18.3557 15.225L19.7507 6.1125C19.7657 6.00543 19.7574 5.89637 19.7263 5.79281C19.6953 5.68925 19.6422 5.59363 19.5707 5.5125ZM7.00068 2.25C7.00068 2.05109 7.0797 1.86032 7.22035 1.71967C7.361 1.57902 7.55177 1.5 7.75068 1.5H12.2507C12.4496 1.5 12.6404 1.57902 12.781 1.71967C12.9217 1.86032 13.0007 2.05109 13.0007 2.25V5.25H7.00068V2.25ZM16.8557 15H3.14568L1.87818 6.75H18.1232L16.8557 15Z" fill="#3C3C3C" />
+								</svg>
+								<div>9</div>
+							</div>
+							<div class="notification_toggle active">
+								<svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M19.5303 14.4697L17.5 12.4394V9.75C17.4976 7.89146 16.8061 6.09983 15.5593 4.72154C14.3126 3.34326 12.599 2.47622 10.75 2.2881V0.75H9.25V2.2881C7.40101 2.47622 5.68744 3.34326 4.44065 4.72154C3.19386 6.09983 2.50241 7.89146 2.5 9.75V12.4394L0.469675 14.4697C0.329041 14.6104 0.250023 14.8011 0.25 15V17.25C0.25 17.4489 0.329018 17.6397 0.46967 17.7803C0.610322 17.921 0.801088 18 1 18H6.25V18.5826C6.23374 19.534 6.56913 20.458 7.19191 21.1775C7.81469 21.897 8.68106 22.3613 9.625 22.4816C10.1464 22.5334 10.6728 22.4754 11.1704 22.3115C11.668 22.1475 12.1258 21.8813 12.5143 21.5298C12.9029 21.1783 13.2135 20.7494 13.4263 20.2707C13.6391 19.7919 13.7494 19.2739 13.75 18.75V18H19C19.1989 18 19.3897 17.921 19.5303 17.7803C19.671 17.6397 19.75 17.4489 19.75 17.25V15C19.75 14.8011 19.671 14.6104 19.5303 14.4697ZM12.25 18.75C12.25 19.3467 12.0129 19.919 11.591 20.341C11.169 20.7629 10.5967 21 10 21C9.40326 21 8.83097 20.7629 8.40901 20.341C7.98705 19.919 7.75 19.3467 7.75 18.75V18H12.25V18.75ZM18.25 16.5H1.75V15.3106L3.78025 13.2802C3.92091 13.1396 3.99996 12.9489 4 12.75V9.75C4 8.1587 4.63214 6.63258 5.75736 5.50736C6.88258 4.38214 8.4087 3.75 10 3.75C11.5913 3.75 13.1174 4.38214 14.2426 5.50736C15.3679 6.63258 16 8.1587 16 9.75V12.75C16 12.9489 16.0791 13.1396 16.2197 13.2802L18.25 15.3106V16.5Z" fill="#3C3C3C" />
+								</svg>
+							</div>
+							<div class="profile_toggle">
+								<img src="images/profile.jpg">
+							</div>
+							<div class="menu_toggle">
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="verification_widget">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<ul class="breadcrumbs">
+						<li>Главная</li>
+						<li>Личный кабинет</li>
+						<li class="current">Верификация</li>
+					</li>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<div class="page_content">
+						<h1 class="two">Верификация</h1>
+						<p class="light mt-4">Согласно законодательству, продажа удобрений разрешена только непосредственным потребителям. Реализация удобрений для последующей перепродажи - запрещена. В связи с эти покупку товаров ГК Азот и АО Аммоний разрешена только фермерским хозяйствам, представителям ЛПХ</p>
+						<p class="mt-4">Пройдите 3 шага, чтобы отправить заявку на верификацию. <span class="light">Если потребуется помощь, позвоните по телефону 8 800 000 00 00</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-5">
+				<div class="col-lg-4">
+					<div class="verification_steps">
+						<div class="verification_steps_item active">
+							<span class="small bold">Шаг 1</span>
+							<span class="small">Правовая форма и тип реализации</span>
+						</div>
+						<div class="verification_steps_item">
+							<span class="small bold">Шаг 2</span>
+							<span class="small">Документы</span>
+						</div>
+						<div class="verification_steps_item">
+							<span class="small bold">Шаг 3</span>
+							<span class="small">Данные о компании</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<div class="main_widget">
+						<form class="verification">
+							<fieldset>
+								<div class="three mb-5">Правовая информация и тип реализации</div>
+								<div class="small mb-2">Выберите правовую форму</div>
+								<input type="hidden" name="company_type" value="Юридическое лицо">
+								<div class="d-flex justify-content-between">
+									<div class="choice_button active">
+										<label for="company_choice1">Юридическое лицо (ООО, АО, ПАО)</label>
+										<input type="radio" checked  name="company_item" value="Юридическое лицо" id="company_choice1">
+									</div>
+									<div class="choice_button">
+										<label for="company_choice2" name="company">Индивидуальный предприниматель </label>
+										<input type="radio"   name="company_item" value="Индивидуальный предприниматель" id="company_choice2">
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mt-5">
+									<div class="btn btn-accent next_form">Перейти на 2 шаг</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="three mb-5">Загрузите документы</div>
+								<div class="input_file_widget">
+									<div class="small">Загрузите карту партнера в формате doc, pdf.</div>
+									<div class="input_file_widget_item">
+										<label for="file1">Загрузить</label>
+									</div>
+									<input type="file" name="file1" id="file1">
+								</div>
+								<div class="input_file_widget">
+									<div class="small">Копия свидетельства о внесении записи в Единый государственный реестр</div>
+									<div class="input_file_widget_item">
+										<label for="file2">Загрузить</label>
+									</div>
+									<input type="file" name="file2" id="file2">
+								</div>
+								<div class="input_file_widget">
+									<div class="small">Отчет о финрезультатах и квитанции о получении налоговой бухотчетности за 2020г.</div>
+									<div class="input_file_widget_item">
+										<label for="file3">Загрузить</label>
+									</div>
+									<input type="file" name="file3" id="file3">
+								</div>
+								<div class="input_file_widget">
+									<div class="small">Титульный лист РСВ (расчеты по страховым взносам) за 2020г.</div>
+									<div class="input_file_widget_item">
+										<label for="file4">Загрузить</label>
+									</div>
+									<input type="file" name="file4" id="file4">
+								</div>
+								<div class="input_file_widget">
+									<div class="small">Копия протокола общего собрания о назначении руководителя</div>
+									<div class="input_file_widget_item">
+										<label for="file5">Загрузить</label>
+									</div>
+									<input type="file" name="file5" id="file5">
+								</div>
+								<div class="d-flex justify-content-end mt-5">
+									<div class="btn btn-accent next_form">Перейти на 3 шаг</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="three mb-5">Заполните данные о компании</div>
+								<div class="form-group">
+									<div class="four">Налоговые реквизиты</div>
+								</div>
+								<div class="form-group form-group-row d-flex align-items-center mb-1">
+									<div class="form-group">
+										<label for="inn">ИНН</label>
+										<input type="text" id="inn">
+									</div>
+									<div class="form-group">
+										<label for="kpp">КПП</label>
+										<input type="text" id="kpp">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="full">Полное наименование</label>
+									<input type="text" id="full">
+								</div>
+								<div class="form-group">
+									<label for="sfull">Краткое наименование</label>
+									<input type="text" id="sfull">
+								</div>
+								<div class="form-group form-group-row d-flex align-items-center">
+									<div class="form-group">
+										<label for="ogrn">ОГРН</label>
+										<input type="text" id="ogrn">
+									</div>
+									<div class="form-group">
+										<label for="okpo">ОКПО</label>
+										<input type="text" id="okpo">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="four">Банковские реквизиты</div>
+								</div>
+								<div class="form-group form-group-row d-flex align-items-center">
+									<div class="form-group">
+										<label for="bik">БИК</label>
+										<input type="text" id="bik">
+									</div>
+									<div class="form-group">
+										<label for="bank">Наименование банка</label>
+										<input type="text" id="bank">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="rs">Номер счета</label>
+									<input type="text" id="rs">
+								</div>
+								<div class="form-group">
+									<label for="ks">Корр.счет</label>
+									<input type="text" id="ks">
+								</div>
+								<div class="form-group form-group-row d-flex align-items-center">
+									<div class="form-group">
+										<label for="innb">ИНН банка</label>
+										<input type="text" id="innb">
+									</div>
+									<div class="form-group">
+										<label for="kppb">КПП</label>
+										<input type="text" id="kppb">
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mt-5">
+									<div class="btn btn-accent send">Отправить на проверку</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="main_widget contact_widget">
+						<div class="two mb-4">Мы можем предоставить дополнительную информацию</div>
+						<form action="">
+							<div class="form-group form-group-row d-flex align-items-center">
+								<div class="form-group">
+									<label for="fname">ФИО</label>
+									<input type="text" id="fname">
+								</div>
+								<div class="form-group">
+									<label for="fphone">Номер телефона</label>
+									<input type="text" id="fphone" class="phone">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="fcomment">Сообщение (необязательно)</label>
+								<textarea name="" id="fcomment" cols="30" rows="5" placeholder="Напишите свой вопрос"></textarea>
+							</div>
+							<div class="d-flex align-items-center mt-4">
+								<button class="btn btn-accent">Отправить</button>
+								<p class="mb-0 ml-2">Отправляя данную форму вы соглашаетесь с политикой конфиденциальности</p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="white">
+						<a href="#" class="logo">
+							<img src="images/logo-white.svg" loading="lazy">
+						</a>
+						<nav class="social d-flex align-items-center justify-content-start">
+							<a href="#">
+								<img src="images/icons/vk.svg" loading="lazy">
+							</a>
+						</nav>
+						<div class="copyright small">© 2007-2023 АО ГК «Азот»</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="f_widget white">
+						<div class="bold">Каталог</div>
+						<nav>
+							<ul>
+								<li><a href="#">Селитра амиачная</a></li>
+								<li><a href="#">Карбамид</a></li>
+								<li><a href="#">Смесь карбамидно-аммиачная КАС-32</a></li>
+								<li><a href="#">Сульфат аммония</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="f_widget white">
+						<div class="bold">Информация</div>
+						<nav>
+							<ul>
+								<li><a href="#">Помощь</a></li>
+								<li><a href="#">Политика конфиденциальности</a></li>
+								<li><a href="#">Пользовательское соглашение</a></li>
+								<li><a href="#">География работы</a></li>
+								<li><a href="#">Новости и обновления</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="f_widget white">
+						<div class="bold">Личный кабинет</div>
+						<nav>
+							<ul>
+								<li><a href="#">Заявки</a></li>
+								<li><a href="#">Профиль компании</a></li>
+								<li><a href="#">История заказов</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="popup for-contact">
+		<div class="popup-dialog">
+			<div class="popup-wrap">
+				<div class="btn-close close">
+					<img src="https://graneks.ru/wp-content/themes/granex/images/cancel.svg">
+				</div>
+				<div class="four mb-3">Анкета на верификацию успешно отправлена</div>
+				<p>Наш менеджер свяжется с вами. Отслеживайте статус верификации в личном кабинете. Уведомление придет на вашу почту, указанную в профиле</p>
+				<div>
+					<div class="btn btn-accent close">Перейти в "Профиль"</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>

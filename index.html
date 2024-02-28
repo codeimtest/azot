@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>AZOT - Верификация</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<script src="libs/jquery/jquery-3.6.0.min.js" defer></script>
+	<script src="libs/input-mask/jquery.maskedinput.min.js" defer></script>
+
+	<script src="js/common.js" defer></script>
+
+</head>
+
+<body class="auth-page">
+
+
+<div class="app">
+	<header>
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col">
+					<a href="/" class="logo">
+						<img src="images/logo.svg">
+					</a>
+				</div>
+				<div class="col">
+					<div class="d-flex align-items-center justify-content-end">
+						<a href="#" class="btn">Вернуться на главную</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="auth_widget">
+		<section>
+			<div class="container">
+				<div class="row align-items-center justify-content-center">
+					<div class="col-11 col-lg-7">
+						<div class="form_toggle main_widget">
+							<div class="form_toggle_widget d-flex align-items-center">
+								<div class="active">Регистрация</div>
+								<div>Вход</div>
+							</div>
+							<div class="form_toggle_items">
+								<form class="sign">
+									<div class="form-group">
+										<label for="fio">ФИО</label>
+										<input type="text" id="fio">
+									</div>
+									<div class="form-group">
+										<label for="inn">ИНН</label>
+										<input type="text" id="inn">
+									</div>
+									<div class="form-group">
+										<label for="phone">Телефон</label>
+										<input type="text" class="phone" id="phone">
+									</div>
+									<div class="form-group">
+										<label for="pass">Пароль</label>
+										<input type="password" id="pass">
+									</div>
+									<div class="d-flex align-items-center justify-content-between mt-4">
+										<p class="mb-0">Нажимая кнопку «Продолжить» Вы соглашаетесь на обработку предоставленных вами персональных данных.</p>
+										<button class="btn btn-accent">Продолжить</button>
+									</div>
+								</form>
+								<form>
+									<div class="form-group">
+										<label for="login">Логин</label>
+										<input type="text" id="login">
+									</div>
+									<div class="form-group">
+										<label for="user_pass">Пароль</label>
+										<input type="password" id="user_pass">
+									</div>
+									<div class="d-flex align-items-center justify-content-between mt-4">
+										<p class="mb-0">Нажимая кнопку «Войти» Вы соглашаетесь на обработку предоставленных вами персональных данных.</p>
+										<button class="btn btn-accent">Войти</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="white">
+						<a href="#" class="logo">
+							<img src="images/logo-white.svg" loading="lazy">
+						</a>
+						<nav class="social d-flex align-items-center justify-content-start">
+							<a href="#">
+								<img src="images/icons/vk.svg" loading="lazy">
+							</a>
+						</nav>
+						<div class="copyright small">© 2007-2023 АО ГК «Азот»</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="f_widget white">
+						<div class="bold">Каталог</div>
+						<nav>
+							<ul>
+								<li><a href="#">Селитра амиачная</a></li>
+								<li><a href="#">Карбамид</a></li>
+								<li><a href="#">Смесь карбамидно-аммиачная КАС-32</a></li>
+								<li><a href="#">Сульфат аммония</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="f_widget white">
+						<div class="bold">Информация</div>
+						<nav>
+							<ul>
+								<li><a href="#">Помощь</a></li>
+								<li><a href="#">Политика конфиденциальности</a></li>
+								<li><a href="#">Пользовательское соглашение</a></li>
+								<li><a href="#">География работы</a></li>
+								<li><a href="#">Новости и обновления</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="f_widget white">
+						<div class="bold">Личный кабинет</div>
+						<nav>
+							<ul>
+								<li><a href="#">Заявки</a></li>
+								<li><a href="#">Профиль компании</a></li>
+								<li><a href="#">История заказов</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+</body>
+</html>
