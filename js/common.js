@@ -12,6 +12,11 @@ $('.form_toggle_widget div').click(function() {
 	var index = $(this).index();
 	$('.form_toggle_items form').eq(index).show();
 });
+
+$('.application_filter div').click(function() {
+	$('.application_filter div').removeClass('active')
+	$(this).addClass('active')
+});
 $('.choice_button').click(function() {
 	$('.choice_button').removeClass('active');
 	$(this).addClass('active');
