@@ -931,6 +931,9 @@ background-position: center center;
 .application_filter div + *{
 margin-left: 24px;
 }
+.application_filter{
+	border-bottom: var(--border);
+}
 .application_filter div{
 	color: var(--lightext);
 	font-size: 14px;
