@@ -14,14 +14,26 @@ $('.form_toggle_widget div').click(function() {
 });
 
 $('.application_filter div').click(function() {
-	$('.application_filter div').removeClass('active')
-	$(this).addClass('active')
+	$('.application_filter div').removeClass('active');
+	$(this).addClass('active');
 });
 $('.choice_button').click(function() {
 	$('.choice_button').removeClass('active');
 	$(this).addClass('active');
-	var choice_value = $(this).find('input').val()
-	$('input[name="company_type"]').val(choice_value)
+	var choice_value = $(this).find('input').val();
+	$('input[name="company_type"]').val(choice_value);
+});
+
+$('.application_filter > div').click(function(){
+	$('.application_filter > div').removeClass('active');
+	$(this).addClass('active');
+	var docsItem = $(this).data('docs-item');
+	var docsTab = $('.documents_widget');
+	var appItem = $(this).data('table-item');
+	var appTab = $('.application_widget_item table > tr');
+
+	docsTab.hide();
+	docsTab.filter('[data-docs="' + docsItem + '"]').fadeIn(100); 
 });
 
 // Fieldset hide\show
