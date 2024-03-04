@@ -18,11 +18,14 @@
 
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="libs/select2/select2.min.css">
 
 	<script src="libs/jquery/jquery-3.6.0.min.js" defer></script>
 	<script src="libs/input-mask/jquery.maskedinput.min.js" defer></script>
+	<script src="libs/select2/select2.min.js" defer></script>
 
 	<script src="js/common.js" defer></script>
+
 
 </head>
 
@@ -108,11 +111,11 @@
 									</div>
 									<nav class="menu_toggle_dropdown">
 										<ul>
-											<li><a href="#">Профиль</a></li>
-											<li><a href="#">Заявки</a></li>
-											<li><a href="#">История заказов</a></li>
-											<li><a href="#">Документы</a></li>
-											<li><a href="#">Выйти</a></li>
+											<li><a href="/profile.html">Профиль</a></li>
+											<li><a href="/applications.html">Заявки</a></li>
+											<li><a href="/history.html">История заказов</a></li>
+											<li><a href="/documents.html">Документы</a></li>
+											<li><a href="/index.html">Выйти</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -171,12 +174,12 @@
 							</div>
 							<div class="verification_enabled mt-3 mb-4">
 								<div class="small center mb-3">Верификация пройдена <br> можете оформить первую заявку</div>
-								<a href="#" class="btn btn-accent btn-large">Оформить заявку</a>
+								<a href="#" class="btn btn-accent btn-large to-application">Оформить заявку</a>
 							</div>
 							<nav>
 								<ul>
 									<li>
-										<a href="#">
+										<a href="/profile.html">
 											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0_1603_4806)">
 													<path
@@ -193,7 +196,7 @@
 										</a>
 									</li>
 									<li class="current">
-										<a href="#">
+										<a href="/applications.html">
 											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0_1603_4812)">
 													<path
@@ -213,7 +216,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="/history.html">
 											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0_1603_4818)">
 													<path
@@ -233,7 +236,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="/documents.html">
 											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0_1603_4825)">
 													<path
@@ -256,7 +259,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="/profile.html">
 											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0_1603_4832)">
 													<path
@@ -276,7 +279,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="/index.html">
 											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0_1603_4838)">
 													<path
@@ -352,7 +355,7 @@
 											</a>
 										</td>
 										<td>
-											<a href="#" class="link">
+											<a href="/application.html" class="link">
 												<span>Подробнее</span>
 												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<g clip-path="url(#clip0_1521_2977)">
@@ -404,7 +407,7 @@
 											</a>
 										</td>
 										<td>
-											<a href="#" class="link">
+											<a href="/application.html" class="link">
 												<span>Подробнее</span>
 												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<g clip-path="url(#clip0_1521_2977)">
@@ -466,7 +469,7 @@
 											</a>
 										</td>
 										<td>
-											<a href="#" class="link">
+											<a href="/application.html" class="link">
 												<span>Подробнее</span>
 												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<g clip-path="url(#clip0_1521_2977)">
@@ -524,7 +527,7 @@
 											</a>
 										</td>
 										<td>
-											<a href="#" class="link lnik_notification">
+											<a href="/application.html" class="link lnik_notification">
 												<span>Подробнее</span>
 												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<g clip-path="url(#clip0_1521_2977)">
@@ -582,7 +585,7 @@
 											</a>
 										</td>
 										<td>
-											<a href="#" class="link lnik_notification">
+											<a href="/application.html" class="link lnik_notification">
 												<span>Подробнее</span>
 												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<g clip-path="url(#clip0_1521_2977)">
@@ -644,7 +647,7 @@
 											</a>
 										</td>
 										<td>
-											<a href="#" class="link lnik_notification">
+											<a href="/application.html" class="link lnik_notification">
 												<span>Подробнее</span>
 												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<g clip-path="url(#clip0_1521_2977)">
@@ -725,17 +728,258 @@
 				</div>
 			</div>
 		</footer>
-		<div class="popup for-contact">
+		<div class="popup for-profile">
 			<div class="popup-dialog">
 				<div class="popup-wrap">
 					<div class="btn-close close">
-						<img src="https://graneks.ru/wp-content/themes/granex/images/cancel.svg">
+						<img src="images/cancel.svg">
 					</div>
-					<div class="four mb-3">Анкета на верификацию успешно отправлена</div>
-					<p>Наш менеджер свяжется с вами. Отслеживайте статус верификации в личном кабинете. Уведомление придет на вашу
-						почту, указанную в профиле</p>
-					<div>
-						<div class="btn btn-accent close">Перейти в "Профиль"</div>
+					<div class="two mb-4">Оформление заявки</div>
+					<form action="">
+						<div class="form-group">
+							<label for="product_send">Выберите продукцию</label>
+							<select name="" id="product_send" class="js-select-single">
+								<option value="Селитра аммиачная марки Б - АО “Аммоний”">Селитра аммиачная марки Б - АО “Аммоний”</option>
+								<option value="Селитра аммиачная марки Б - АО “Аммоний”">Селитра аммиачная марки С - АО “Аммоний”</option>
+							</select>
+						</div>
+						<div class="form-group form-group-row d-flex align-items-center">
+							<div class="form-group">
+								<label for="">Объем, Т</label>
+								<div class="count_block">
+									<div class="minus">-</div>
+									<input type="number" value="100" min="10" max="1000" step="100">
+									<div class="plus">+</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="product_send">Поставщик</label>
+								<select name="" id="product_company" class="js-select-single">
+									<option value="Селитра аммиачная марки Б - АО “Аммоний”">ООО «Аммоний-Агро»</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="">Предпочтительные варианты упаковки</label>
+							<div class="checkbox_wrap">
+								<label class="checkbox">
+									<input type="checkbox" checked="" name="policy_check" id="policy_check" wfd-id="id12">
+									<span>МКР</span>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox_wrap">
+								<label class="checkbox">
+									<input type="checkbox" checked="" name="policy_check" id="policy_check" wfd-id="id12">
+									<span>Мешки 50 кг</span>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>
+						<hr>
+						<div class="four mb-3 mt-4 text-normal">Способы доставки</div>
+						<div class="form-group select-group d-flex">
+							<select name="" id="" class="js-select-single">
+								<option value="">ЖД транспорт</option>
+							</select>
+							<select name="" id="" class="js-select-single">
+								<option value="">Авиатранспорт</option>
+							</select>
+						</div>
+						<div class="link_accent mt-3 mb-4">Добавить пункт выгрузки</div>
+						<hr>
+						<div class="four mb-3 mt-4 text-normal">Срок поставки</div>
+						<div>
+							<input type="hidden" name="company_type" value="Юридическое лицо">
+								<div class="d-flex justify-content-between">
+									<div class="choice_button choice_accent active">
+										<label for="company_choice1">До фиксированной даты</label>
+										<input type="radio" checked  name="company_item" value="Юридическое лицо" id="company_choice1">
+									</div>
+									<div class="choice_button choice_accent ">
+										<label for="company_choice2" name="company">Период поставки </label>
+										<input type="radio"   name="company_item" value="Индивидуальный предприниматель" id="company_choice2">
+									</div>
+								</div>
+						</div>
+						<div class="form-group mt-2">
+							<input type="date" name="" id="">
+						</div>
+						<div class="d-flex justify-content-end mt-4">
+							<div class="btn btn-accent to-application-send">Отправить заявку</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="popup for-application">
+			<div class="popup-dialog">
+				<div class="popup-wrap">
+					<div class="btn-close close">
+						<img src="images/cancel.svg">
+					</div>
+					<div class="three mb-3">Ваша заявка №123123 успешно создана</div>
+					<p>Наш менеджер свяжется с вами в ближайшее время. Отслеживайте статус заявки в личном кабинете.</p>
+					<div class="application_total_list">
+						<div class="application_total_list_item d-flex align-items-center">
+							<img src="images/image.jpg" loading="lazy">
+							<div>
+								<div class="three text-normal mb-2">Селитра аммиачная марки Б, высший сорт ГОСТ 2-2013</div>
+								<div class="d-flex align-items-center">
+									<div>
+										<div class="less light">Вы выбрали</div>
+										<div>1 000 T</div>
+									</div>
+									<div class="ml-2">
+										<div class="less light">Поставщик</div>
+										<div>ООО "Аммоний-Агро"</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup for-docs">
+			<div class="popup-dialog">
+				<div class="popup-wrap">
+					<div class="btn-close close">
+						<img src="images/cancel.svg">
+					</div>
+					<div class="d-flex align-items-center mb-4">
+						<div class="three">Документы по заявке №1221</div>
+						<label for="input_docs" class="btn ml-2">Загрузить документ</label>
+						<input type="file" class="d-none" id="input_docs">
+					</div>
+					<div class="file_list_widget">
+						<div>
+							<a href="#" class="d-flex align-items-center small">
+								<div class="file_icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1521_3986)">
+											<path d="M19.275 6.975L14.025 1.725C13.875 1.575 13.725 1.5 13.5 1.5H6C5.175 1.5 4.5 2.175 4.5 3V21C4.5 21.825 5.175 22.5 6 22.5H18C18.825 22.5 19.5 21.825 19.5 21V7.5C19.5 7.275 19.425 7.125 19.275 6.975ZM13.5 3.3L17.7 7.5H13.5V3.3ZM18 21H6V3H12V7.5C12 8.325 12.675 9 13.5 9H18V21Z" fill="#3C3C3C"></path>
+											<path d="M16.5 16.5H7.5V18H16.5V16.5Z" fill="#3C3C3C"></path>
+											<path d="M16.5 12H7.5V13.5H16.5V12Z" fill="#3C3C3C"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_1521_3986">
+												<rect width="24" height="24" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<span>Спецификация в PDF</span>
+							</a>
+						</div>
+						<div>
+							<a href="#" class="d-flex align-items-center small">
+								<div class="file_icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1521_3986)">
+											<path d="M19.275 6.975L14.025 1.725C13.875 1.575 13.725 1.5 13.5 1.5H6C5.175 1.5 4.5 2.175 4.5 3V21C4.5 21.825 5.175 22.5 6 22.5H18C18.825 22.5 19.5 21.825 19.5 21V7.5C19.5 7.275 19.425 7.125 19.275 6.975ZM13.5 3.3L17.7 7.5H13.5V3.3ZM18 21H6V3H12V7.5C12 8.325 12.675 9 13.5 9H18V21Z" fill="#3C3C3C"></path>
+											<path d="M16.5 16.5H7.5V18H16.5V16.5Z" fill="#3C3C3C"></path>
+											<path d="M16.5 12H7.5V13.5H16.5V12Z" fill="#3C3C3C"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_1521_3986">
+												<rect width="24" height="24" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<span>Коммерческое предложение в PDF</span>
+							</a>
+						</div>
+						<div>
+							<a href="#" class="d-flex align-items-center small">
+								<div class="file_icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1521_3986)">
+											<path d="M19.275 6.975L14.025 1.725C13.875 1.575 13.725 1.5 13.5 1.5H6C5.175 1.5 4.5 2.175 4.5 3V21C4.5 21.825 5.175 22.5 6 22.5H18C18.825 22.5 19.5 21.825 19.5 21V7.5C19.5 7.275 19.425 7.125 19.275 6.975ZM13.5 3.3L17.7 7.5H13.5V3.3ZM18 21H6V3H12V7.5C12 8.325 12.675 9 13.5 9H18V21Z" fill="#3C3C3C"></path>
+											<path d="M16.5 16.5H7.5V18H16.5V16.5Z" fill="#3C3C3C"></path>
+											<path d="M16.5 12H7.5V13.5H16.5V12Z" fill="#3C3C3C"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_1521_3986">
+												<rect width="24" height="24" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<span>Договор №1221 от 21.11.2023 в PDF</span>
+							</a>
+						</div>
+						<div>
+							<a href="#" class="d-flex align-items-center small">
+								<div class="file_icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1521_3986)">
+											<path d="M19.275 6.975L14.025 1.725C13.875 1.575 13.725 1.5 13.5 1.5H6C5.175 1.5 4.5 2.175 4.5 3V21C4.5 21.825 5.175 22.5 6 22.5H18C18.825 22.5 19.5 21.825 19.5 21V7.5C19.5 7.275 19.425 7.125 19.275 6.975ZM13.5 3.3L17.7 7.5H13.5V3.3ZM18 21H6V3H12V7.5C12 8.325 12.675 9 13.5 9H18V21Z" fill="#3C3C3C"></path>
+											<path d="M16.5 16.5H7.5V18H16.5V16.5Z" fill="#3C3C3C"></path>
+											<path d="M16.5 12H7.5V13.5H16.5V12Z" fill="#3C3C3C"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_1521_3986">
+												<rect width="24" height="24" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<span>Приложение к договору в PDF</span>
+							</a>
+						</div>
+						<div>
+							<a href="#" class="d-flex align-items-center small">
+								<div class="file_icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1521_3986)">
+											<path d="M19.275 6.975L14.025 1.725C13.875 1.575 13.725 1.5 13.5 1.5H6C5.175 1.5 4.5 2.175 4.5 3V21C4.5 21.825 5.175 22.5 6 22.5H18C18.825 22.5 19.5 21.825 19.5 21V7.5C19.5 7.275 19.425 7.125 19.275 6.975ZM13.5 3.3L17.7 7.5H13.5V3.3ZM18 21H6V3H12V7.5C12 8.325 12.675 9 13.5 9H18V21Z" fill="#3C3C3C"></path>
+											<path d="M16.5 16.5H7.5V18H16.5V16.5Z" fill="#3C3C3C"></path>
+											<path d="M16.5 12H7.5V13.5H16.5V12Z" fill="#3C3C3C"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_1521_3986">
+												<rect width="24" height="24" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<span>Счет №1221 от 22.11.2023 в PDF</span>
+							</a>
+						</div>
+					</div>
+					<div class="four mt-5  mb-3">Загруженные</div>
+					<div class="file_list_widget">
+						<div>
+							<a href="#" class="d-flex align-items-center small">
+								<div class="file_icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1521_3986)">
+											<path d="M19.275 6.975L14.025 1.725C13.875 1.575 13.725 1.5 13.5 1.5H6C5.175 1.5 4.5 2.175 4.5 3V21C4.5 21.825 5.175 22.5 6 22.5H18C18.825 22.5 19.5 21.825 19.5 21V7.5C19.5 7.275 19.425 7.125 19.275 6.975ZM13.5 3.3L17.7 7.5H13.5V3.3ZM18 21H6V3H12V7.5C12 8.325 12.675 9 13.5 9H18V21Z" fill="#3C3C3C"></path>
+											<path d="M16.5 16.5H7.5V18H16.5V16.5Z" fill="#3C3C3C"></path>
+											<path d="M16.5 12H7.5V13.5H16.5V12Z" fill="#3C3C3C"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_1521_3986">
+												<rect width="24" height="24" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<span>Доверенность №1221 от 21.11.2023 в PDF</span>
+								
+							</a>
+							<div class="remove_docs">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.75 7.5H7.5V15H8.75V7.5Z" fill="#FC3A4D"></path>
+									<path d="M12.5 7.5H11.25V15H12.5V7.5Z" fill="#FC3A4D"></path>
+									<path d="M2.5 3.75V5H3.75V17.5C3.75 17.8315 3.8817 18.1495 4.11612 18.3839C4.35054 18.6183 4.66848 18.75 5 18.75H15C15.3315 18.75 15.6495 18.6183 15.8839 18.3839C16.1183 18.1495 16.25 17.8315 16.25 17.5V5H17.5V3.75H2.5ZM5 17.5V5H15V17.5H5Z" fill="#FC3A4D"></path>
+									<path d="M12.5 1.25H7.5V2.5H12.5V1.25Z" fill="#FC3A4D"></path>
+								</svg>
+							</div>
+						</div>
+						
 					</div>
 				</div>
 			</div>

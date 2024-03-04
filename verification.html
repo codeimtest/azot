@@ -17,11 +17,14 @@
 
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="libs/select2/select2.min.css">
 
 	<script src="libs/jquery/jquery-3.6.0.min.js" defer></script>
 	<script src="libs/input-mask/jquery.maskedinput.min.js" defer></script>
+	<script src="libs/select2/select2.min.js" defer></script>
 
 	<script src="js/common.js" defer></script>
+
 
 </head>
 
@@ -65,23 +68,55 @@
 				<div class="col">
 					<div class="d-flex align-items-center justify-content-end">
 						<!-- <a href="#" class="btn">Вернуться на главную</a> -->
-						<div class="header-widget d-flex align-items-center">
-							<div class="cart_toggle">
+						<div class="header-widget d-flex align-items-center relative">
+							<div class="cart_toggle ">
 								<svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M19.5707 5.5125C19.5003 5.43018 19.4129 5.36408 19.3145 5.31877C19.2161 5.27345 19.109 5.24999 19.0007 5.25H14.5007V2.25C14.5007 1.65326 14.2636 1.08097 13.8417 0.65901C13.4197 0.237053 12.8474 0 12.2507 0H7.75068C7.15394 0 6.58165 0.237053 6.15969 0.65901C5.73773 1.08097 5.50068 1.65326 5.50068 2.25V5.25H1.00068C0.891965 5.24877 0.784281 5.27119 0.685091 5.31571C0.5859 5.36022 0.497575 5.42578 0.426233 5.50782C0.354892 5.58986 0.302241 5.68643 0.271928 5.79084C0.241615 5.89526 0.234365 6.00501 0.25068 6.1125L1.66068 15.225C1.71492 15.5827 1.89661 15.9087 2.17225 16.143C2.4479 16.3773 2.79893 16.5041 3.16068 16.5H16.8557C17.2174 16.5041 17.5685 16.3773 17.8441 16.143C18.1198 15.9087 18.3014 15.5827 18.3557 15.225L19.7507 6.1125C19.7657 6.00543 19.7574 5.89637 19.7263 5.79281C19.6953 5.68925 19.6422 5.59363 19.5707 5.5125ZM7.00068 2.25C7.00068 2.05109 7.0797 1.86032 7.22035 1.71967C7.361 1.57902 7.55177 1.5 7.75068 1.5H12.2507C12.4496 1.5 12.6404 1.57902 12.781 1.71967C12.9217 1.86032 13.0007 2.05109 13.0007 2.25V5.25H7.00068V2.25ZM16.8557 15H3.14568L1.87818 6.75H18.1232L16.8557 15Z" fill="#3C3C3C" />
+									<path
+										d="M19.5707 5.5125C19.5003 5.43018 19.4129 5.36408 19.3145 5.31877C19.2161 5.27345 19.109 5.24999 19.0007 5.25H14.5007V2.25C14.5007 1.65326 14.2636 1.08097 13.8417 0.65901C13.4197 0.237053 12.8474 0 12.2507 0H7.75068C7.15394 0 6.58165 0.237053 6.15969 0.65901C5.73773 1.08097 5.50068 1.65326 5.50068 2.25V5.25H1.00068C0.891965 5.24877 0.784281 5.27119 0.685091 5.31571C0.5859 5.36022 0.497575 5.42578 0.426233 5.50782C0.354892 5.58986 0.302241 5.68643 0.271928 5.79084C0.241615 5.89526 0.234365 6.00501 0.25068 6.1125L1.66068 15.225C1.71492 15.5827 1.89661 15.9087 2.17225 16.143C2.4479 16.3773 2.79893 16.5041 3.16068 16.5H16.8557C17.2174 16.5041 17.5685 16.3773 17.8441 16.143C18.1198 15.9087 18.3014 15.5827 18.3557 15.225L19.7507 6.1125C19.7657 6.00543 19.7574 5.89637 19.7263 5.79281C19.6953 5.68925 19.6422 5.59363 19.5707 5.5125ZM7.00068 2.25C7.00068 2.05109 7.0797 1.86032 7.22035 1.71967C7.361 1.57902 7.55177 1.5 7.75068 1.5H12.2507C12.4496 1.5 12.6404 1.57902 12.781 1.71967C12.9217 1.86032 13.0007 2.05109 13.0007 2.25V5.25H7.00068V2.25ZM16.8557 15H3.14568L1.87818 6.75H18.1232L16.8557 15Z"
+										fill="#3C3C3C" />
 								</svg>
 								<div>9</div>
 							</div>
-							<div class="notification_toggle active">
+							<div class="notification_toggle has_notification toggle_button_widget">
 								<svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M19.5303 14.4697L17.5 12.4394V9.75C17.4976 7.89146 16.8061 6.09983 15.5593 4.72154C14.3126 3.34326 12.599 2.47622 10.75 2.2881V0.75H9.25V2.2881C7.40101 2.47622 5.68744 3.34326 4.44065 4.72154C3.19386 6.09983 2.50241 7.89146 2.5 9.75V12.4394L0.469675 14.4697C0.329041 14.6104 0.250023 14.8011 0.25 15V17.25C0.25 17.4489 0.329018 17.6397 0.46967 17.7803C0.610322 17.921 0.801088 18 1 18H6.25V18.5826C6.23374 19.534 6.56913 20.458 7.19191 21.1775C7.81469 21.897 8.68106 22.3613 9.625 22.4816C10.1464 22.5334 10.6728 22.4754 11.1704 22.3115C11.668 22.1475 12.1258 21.8813 12.5143 21.5298C12.9029 21.1783 13.2135 20.7494 13.4263 20.2707C13.6391 19.7919 13.7494 19.2739 13.75 18.75V18H19C19.1989 18 19.3897 17.921 19.5303 17.7803C19.671 17.6397 19.75 17.4489 19.75 17.25V15C19.75 14.8011 19.671 14.6104 19.5303 14.4697ZM12.25 18.75C12.25 19.3467 12.0129 19.919 11.591 20.341C11.169 20.7629 10.5967 21 10 21C9.40326 21 8.83097 20.7629 8.40901 20.341C7.98705 19.919 7.75 19.3467 7.75 18.75V18H12.25V18.75ZM18.25 16.5H1.75V15.3106L3.78025 13.2802C3.92091 13.1396 3.99996 12.9489 4 12.75V9.75C4 8.1587 4.63214 6.63258 5.75736 5.50736C6.88258 4.38214 8.4087 3.75 10 3.75C11.5913 3.75 13.1174 4.38214 14.2426 5.50736C15.3679 6.63258 16 8.1587 16 9.75V12.75C16 12.9489 16.0791 13.1396 16.2197 13.2802L18.25 15.3106V16.5Z" fill="#3C3C3C" />
+									<path
+										d="M19.5303 14.4697L17.5 12.4394V9.75C17.4976 7.89146 16.8061 6.09983 15.5593 4.72154C14.3126 3.34326 12.599 2.47622 10.75 2.2881V0.75H9.25V2.2881C7.40101 2.47622 5.68744 3.34326 4.44065 4.72154C3.19386 6.09983 2.50241 7.89146 2.5 9.75V12.4394L0.469675 14.4697C0.329041 14.6104 0.250023 14.8011 0.25 15V17.25C0.25 17.4489 0.329018 17.6397 0.46967 17.7803C0.610322 17.921 0.801088 18 1 18H6.25V18.5826C6.23374 19.534 6.56913 20.458 7.19191 21.1775C7.81469 21.897 8.68106 22.3613 9.625 22.4816C10.1464 22.5334 10.6728 22.4754 11.1704 22.3115C11.668 22.1475 12.1258 21.8813 12.5143 21.5298C12.9029 21.1783 13.2135 20.7494 13.4263 20.2707C13.6391 19.7919 13.7494 19.2739 13.75 18.75V18H19C19.1989 18 19.3897 17.921 19.5303 17.7803C19.671 17.6397 19.75 17.4489 19.75 17.25V15C19.75 14.8011 19.671 14.6104 19.5303 14.4697ZM12.25 18.75C12.25 19.3467 12.0129 19.919 11.591 20.341C11.169 20.7629 10.5967 21 10 21C9.40326 21 8.83097 20.7629 8.40901 20.341C7.98705 19.919 7.75 19.3467 7.75 18.75V18H12.25V18.75ZM18.25 16.5H1.75V15.3106L3.78025 13.2802C3.92091 13.1396 3.99996 12.9489 4 12.75V9.75C4 8.1587 4.63214 6.63258 5.75736 5.50736C6.88258 4.38214 8.4087 3.75 10 3.75C11.5913 3.75 13.1174 4.38214 14.2426 5.50736C15.3679 6.63258 16 8.1587 16 9.75V12.75C16 12.9489 16.0791 13.1396 16.2197 13.2802L18.25 15.3106V16.5Z"
+										fill="#3C3C3C" />
 								</svg>
+								<div class="notification_toggle_dropdown">
+									<div class="dropdown_header">
+										<div class="five">
+											Уведомление
+										</div>
+									</div>
+									<div class="dropdown_content">
+										<div class="dropdown_content_item alarm_notification">
+											<div class="small">ООО “Поле” отказано в верификации</div>
+											<div class="light">2 дня назад</div>
+										</div>
+										<div class="dropdown_content_item ">
+											<div class="small">ООО “Поле” отказано в верификации</div>
+											<div class="light">2 дня назад</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="profile_toggle">
 								<img src="images/profile.jpg">
 							</div>
-							<div class="menu_toggle">
-								<span></span>
+							<div class="menu_toggle_dropdown_widget toggle_button_widget">
+								<div class="menu_toggle">
+									<span></span>
+								</div>
+								<nav class="menu_toggle_dropdown">
+									<ul>
+										<li><a href="/profile.html">Профиль</a></li>
+										<li><a href="/applications.html">Заявки</a></li>
+										<li><a href="/history.html">История заказов</a></li>
+										<li><a href="/documents.html">Документы</a></li>
+										<li><a href="/index.html">Выйти</a></li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 					</div>
@@ -113,16 +148,16 @@
 			</div>
 			<div class="row mb-5">
 				<div class="col-lg-4">
-					<div class="verification_steps">
-						<div class="verification_steps_item active">
+					<div class="verification_steps sticky">
+						<div class="verification_steps_item active" data-step="Шаг 1">
 							<span class="small bold">Шаг 1</span>
 							<span class="small">Правовая форма и тип реализации</span>
 						</div>
-						<div class="verification_steps_item">
+						<div class="verification_steps_item" data-step="Шаг 2">
 							<span class="small bold">Шаг 2</span>
 							<span class="small">Документы</span>
 						</div>
-						<div class="verification_steps_item">
+						<div class="verification_steps_item" data-step="Шаг 3">
 							<span class="small bold">Шаг 3</span>
 							<span class="small">Данные о компании</span>
 						</div>
@@ -131,7 +166,7 @@
 				<div class="col-lg-8">
 					<div class="main_widget">
 						<form class="verification">
-							<fieldset>
+							<fieldset data-field="Шаг 1">
 								<div class="three mb-5">Правовая информация и тип реализации</div>
 								<div class="small mb-2">Выберите правовую форму</div>
 								<input type="hidden" name="company_type" value="Юридическое лицо">
@@ -149,7 +184,7 @@
 									<div class="btn btn-accent next_form">Перейти на 2 шаг</div>
 								</div>
 							</fieldset>
-							<fieldset>
+							<fieldset data-field="Шаг 2">
 								<div class="three mb-5">Загрузите документы</div>
 								<div class="input_file_widget">
 									<div class="small">Загрузите карту партнера в формате doc, pdf.</div>
@@ -190,7 +225,7 @@
 									<div class="btn btn-accent next_form">Перейти на 3 шаг</div>
 								</div>
 							</fieldset>
-							<fieldset>
+							<fieldset data-field="Шаг 3">
 								<div class="three mb-5">Заполните данные о компании</div>
 								<div class="form-group">
 									<div class="four">Налоговые реквизиты</div>
@@ -349,16 +384,115 @@
 			</div>
 		</div>
 	</footer>
-	<div class="popup for-contact">
+	<div class="popup for-profile">
 		<div class="popup-dialog">
 			<div class="popup-wrap">
 				<div class="btn-close close">
-					<img src="https://graneks.ru/wp-content/themes/granex/images/cancel.svg">
+					<img src="images/cancel.svg">
 				</div>
-				<div class="four mb-3">Анкета на верификацию успешно отправлена</div>
-				<p>Наш менеджер свяжется с вами. Отслеживайте статус верификации в личном кабинете. Уведомление придет на вашу почту, указанную в профиле</p>
-				<div>
-					<div class="btn btn-accent close">Перейти в "Профиль"</div>
+				<div class="two mb-4">Оформление заявки</div>
+				<form action="">
+					<div class="form-group">
+						<label for="product_send">Выберите продукцию</label>
+						<select name="" id="product_send" class="js-select-single">
+							<option value="Селитра аммиачная марки Б - АО “Аммоний”">Селитра аммиачная марки Б - АО “Аммоний”</option>
+							<option value="Селитра аммиачная марки Б - АО “Аммоний”">Селитра аммиачная марки С - АО “Аммоний”</option>
+						</select>
+					</div>
+					<div class="form-group form-group-row d-flex align-items-center">
+						<div class="form-group">
+							<label for="">Объем, Т</label>
+							<div class="count_block">
+								<div class="minus">-</div>
+								<input type="number" value="100" min="10" max="1000" step="100">
+								<div class="plus">+</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="product_send">Поставщик</label>
+							<select name="" id="product_company" class="js-select-single">
+								<option value="Селитра аммиачная марки Б - АО “Аммоний”">ООО «Аммоний-Агро»</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="">Предпочтительные варианты упаковки</label>
+						<div class="checkbox_wrap">
+							<label class="checkbox">
+								<input type="checkbox" checked="" name="policy_check" id="policy_check" wfd-id="id12">
+								<span>МКР</span>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox_wrap">
+							<label class="checkbox">
+								<input type="checkbox" checked="" name="policy_check" id="policy_check" wfd-id="id12">
+								<span>Мешки 50 кг</span>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+					<hr>
+					<div class="four mb-3 mt-4 text-normal">Способы доставки</div>
+					<div class="form-group select-group d-flex">
+						<select name="" id="" class="js-select-single">
+							<option value="">ЖД транспорт</option>
+						</select>
+						<select name="" id="" class="js-select-single">
+							<option value="">Авиатранспорт</option>
+						</select>
+					</div>
+					<div class="link_accent mt-3 mb-4">Добавить пункт выгрузки</div>
+					<hr>
+					<div class="four mb-3 mt-4 text-normal">Срок поставки</div>
+					<div>
+						<input type="hidden" name="company_type" value="Юридическое лицо">
+							<div class="d-flex justify-content-between">
+								<div class="choice_button choice_accent active">
+									<label for="company_choice1">До фиксированной даты</label>
+									<input type="radio" checked  name="company_item" value="Юридическое лицо" id="company_choice1">
+								</div>
+								<div class="choice_button choice_accent ">
+									<label for="company_choice2" name="company">Период поставки </label>
+									<input type="radio"   name="company_item" value="Индивидуальный предприниматель" id="company_choice2">
+								</div>
+							</div>
+					</div>
+					<div class="form-group mt-2">
+						<input type="date" name="" id="">
+					</div>
+					<div class="d-flex justify-content-end mt-4">
+						<div class="btn btn-accent to-application-send">Отправить заявку</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup for-application">
+		<div class="popup-dialog">
+			<div class="popup-wrap">
+				<div class="btn-close close">
+					<img src="images/cancel.svg">
+				</div>
+				<div class="three mb-3">Ваша заявка №123123 успешно создана</div>
+				<p>Наш менеджер свяжется с вами в ближайшее время. Отслеживайте статус заявки в личном кабинете.</p>
+				<div class="application_total_list">
+					<div class="application_total_list_item d-flex align-items-center">
+						<img src="images/image.jpg" loading="lazy">
+						<div>
+							<div class="three text-normal mb-2">Селитра аммиачная марки Б, высший сорт ГОСТ 2-2013</div>
+							<div class="d-flex align-items-center">
+								<div>
+									<div class="less light">Вы выбрали</div>
+									<div>1 000 T</div>
+								</div>
+								<div class="ml-2">
+									<div class="less light">Поставщик</div>
+									<div>ООО "Аммоний-Агро"</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

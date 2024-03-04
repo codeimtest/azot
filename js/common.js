@@ -58,6 +58,21 @@ $('.next_form').click(function() {
     nextFieldset.fadeIn('100');
 });
 });
+$('.verification_steps > div').click(function(){
+	$('.verification_steps > div').removeClass('active');
+	$(this).addClass('active');
+	var step = $(this).data('step');
+	var stepField = $('fieldset');
+
+	stepField.each(function() {
+			var fieldStep = $(this).data('field');
+			if (fieldStep === step) {
+					$(this).fadeIn(100);
+			} else {
+					$(this).hide();
+			}
+	});
+});
 
 // File widget
 
@@ -88,9 +103,23 @@ $(".phone").mask("+7(999) 999-9999");
 $('.close').click(function() {
 	$('.popup').removeClass('active')
 });
-$('.send').click(function() {
-	$('.popup').addClass('active')
+$('.send').click(function(e) {
+	$('.for-contact').addClass('active')
+	e.preventDefault();
 });
+$('.to-application').click(function(e) {
+	$('.for-profile').addClass('active')
+	e.preventDefault();
+});
+$('.to-application-send').click(function(e) {
+	$('.popup').removeClass('active')
+	$('.for-application').addClass('active')
+	e.preventDefault();
+});
+$('.docs_link').click(function(e){
+	$('.for-docs').addClass('active')
+	e.preventDefault();
+})
 
 // Menu
 
@@ -115,4 +144,40 @@ $('.toggle_button_widget').click(function() {
 	container.toggleClass('active');
 	toggle.toggleClass('active');
 	
+});
+
+
+//other form items
+
+	$('.minus').click(function() {
+			var input = $(this).siblings('input[type="number"]');
+			var value = parseInt(input.val(), 10);
+			var min = parseInt(input.attr('min'), 10);
+			var step = parseInt(input.attr('step'), 10);
+			if (value > min) {
+					input.val(value - step);
+			}
+	});
+
+	$('.plus').click(function() {
+			var input = $(this).siblings('input[type="number"]');
+			var value = parseInt(input.val(), 10);
+			var max = parseInt(input.attr('max'), 10);
+			var step = parseInt(input.attr('step'), 10);
+			if (value + step <= max) {
+					input.val(value + step);
+			}
+	});
+
+	$('input[type="number"]').on('input', function() {
+			var input = $(this);
+			var value = parseInt(input.val(), 10);
+			var max = parseInt(input.attr('max'), 10);
+			if (value > max) {
+					input.val(max);
+			}
+	});
+
+$('.js-select-single').select2({
+	minimumResultsForSearch: -1,
 });
