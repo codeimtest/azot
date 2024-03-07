@@ -137,6 +137,9 @@ h5,.five{
 .link.underline{
 	text-decoration: underline;
 }
+.text-link{
+	color: var(--text);
+}
 .link{
 	text-decoration: none;
 	font-size: 12px;
@@ -1605,6 +1608,7 @@ input[type="checkbox"]{
 .buy_steps_widget{
 	padding: 0 40px;
 	position: relative;
+	width: 100%;
 }
 .buy_steps_widget::after{
 	content: '';
@@ -1810,4 +1814,9 @@ body .catalog_filters .select2-container{
 	top: 0;
 	bottom: 0;
 	margin: auto;
+}
+.faq_widget_item ul ,.faq_widget_item ol {
+	padding-left: 20px;
+	margin-bottom: 0;
+	margin-top: 10px;
 }
