@@ -928,6 +928,16 @@ background-position: center center;
 	position: relative;
 	width: max-content;
 }
+.badget.badget_ready::before ~ div {
+	content: none;
+}
+.badget.badget_ready:not(:has(> div)) > span::after {
+	content: none;
+}
+.badget.badget_ready:not(:has(> div)) > span{
+	padding-right: 0;
+	margin-right: 0;
+}
 .badget::before{
 	content: '';
 	border-radius: 50%;
@@ -1228,6 +1238,34 @@ margin-left: 24px;
 .documents_widget_item.signed .documents_widget_item_additional{
 	background: rgba(57, 182, 53, 0.08);
 }
+.droplist_docs {
+	position: absolute;
+	background: #fff;
+	min-width: 280px;
+	padding: 10px;
+	top: 40px;
+	border: var(--border);
+	transition: var(--transition);
+	opacity: 0;
+	visibility: hidden;
+}
+.droplist_docs.active{
+	opacity: 1;
+	visibility: visible;
+}
+.droplist_docs a{
+	color: var(--text);
+	font-size: 14px;
+}
+.droplist_docs a + a{
+	margin-top: 10px;
+}
+.documents_widget_status:has(.droplist_docs){
+	cursor: pointer;
+}
+.documents_widget_status{
+	position: relative;
+}
 .documents_widget_status span{
 	margin-left: 12px;
 }
@@ -1239,6 +1277,10 @@ margin-left: 24px;
 }
 .documents_widget_item_additional > div:last-child,.documents_widget_item_meta > div:last-child{
 	width: 32%;
+}
+.documents_widget_item_additional svg{
+	opacity: 1;
+	visibility: visible;
 }
 /* history widget */
 .history_order_widget.application_widget_item td:last-child{

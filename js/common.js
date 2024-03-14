@@ -21,8 +21,64 @@ $('.choice_button').click(function() {
 	$('.choice_button').removeClass('active');
 	$(this).addClass('active');
 	var choice_value = $(this).find('input').val();
+	
 	$('input[name="company_type"]').val(choice_value);
+
 });
+$(document).ready(function() {
+	var companyTypeInput = $('input[name="company_type"]').val();
+
+	// Показываем блоки без атрибута data-company-type
+	$('.input_file_widget:not([data-company-type])').show();
+
+	$('.input_file_widget').each(function() {
+			var company_type_input = $(this).data('company-type');
+			if (typeof company_type_input !== 'undefined') {
+					if (companyTypeInput === company_type_input) {
+							$(this).show(); // Отображаем .input_file_widget, если значение совпадает
+					} else {
+							$(this).hide(); // Скрываем .input_file_widget, если значение не совпадает
+					}
+			}
+	});
+
+	$('.choice_button input').on('change', function() {
+			checkAndUpdate($(this).closest('.choice_button'));
+	});
+});
+
+function checkAndUpdate($button) {
+	var $input = $button.find('input');
+	var totalChoice = $input.val();
+
+	$('.input_file_widget').each(function() {
+			var company_type_input = $(this).data('company-type');
+
+			if (typeof company_type_input !== 'undefined') {
+					if (totalChoice !== company_type_input) {
+							$(this).hide(); // Скрываем .input_file_widget, если значение не совпадает
+							$(this).find('input').prop('disabled', true);
+							$(this).find('input').val('');
+							$(this).removeClass('active');
+							$(this).find('label').text('Загрузить');
+							$(this).find('.remove_file').remove();
+					} else {
+							$(this).show(); // Показываем .input_file_widget, если значение совпадает
+							$(this).find('input').prop('disabled', false);
+							$(this).find('input').val('');
+					}
+			} else {
+					// Показываем .input_file_widget, если нет атрибута data-company-type
+					$(this).show();
+					$(this).find('input').prop('disabled', false);
+					$(this).find('input').val('');
+			}
+	});
+}
+
+
+
+
 
 $('.application_filter > div').click(function(){
 	$('.application_filter > div').removeClass('active');
@@ -56,9 +112,9 @@ $('.next_form').click(function() {
 			$allDivs.first().addClass('active');
 	}
 	// Скрываем текущий fieldset плавно
-	currentFieldset.fadeOut('100', function() {
-    nextFieldset.fadeIn('100');
-});
+ 	currentFieldset.fadeOut('100', function() {
+     nextFieldset.fadeIn('100');
+ });
 });
 $('.verification_steps > div').click(function(){
 	$('.verification_steps > div').removeClass('active');
@@ -218,3 +274,17 @@ console.log('123')
 $('.js-select-single').select2({
 	minimumResultsForSearch: -1,
 });
+
+$('.documents_widget_status').click(function(){
+	$(this).children().closest('.droplist_docs').toggleClass('active')
+})
+$(document).mouseup(function (e) {
+	var container1 = $(".droplist_docs");
+	
+	// Если цель клика не является контейнером и не является дочерним элементом контейнера
+	if (!container1.is(e.target) && container1.has(e.target).length === 0) {
+				 container1.removeClass('active');
+		 } else { 
+				 container1.toggleClass('active');
+		 }
+	 });
