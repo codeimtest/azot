@@ -29,15 +29,15 @@ $(document).ready(function() {
 	var companyTypeInput = $('input[name="company_type"]').val();
 
 	// Показываем блоки без атрибута data-company-type
-	$('.input_file_widget:not([data-company-type])').show();
+	$('.input-choice:not([data-company-type])').show();
 
-	$('.input_file_widget').each(function() {
+	$('.input-choice').each(function() {
 			var company_type_input = $(this).data('company-type');
 			if (typeof company_type_input !== 'undefined') {
 					if (companyTypeInput === company_type_input) {
 							$(this).show(); // Отображаем .input_file_widget, если значение совпадает
 					} else {
-							$(this).hide(); // Скрываем .input_file_widget, если значение не совпадает
+							$(this).attr('style','display:none !important'); // Скрываем .input_file_widget, если значение не совпадает
 					}
 			}
 	});
@@ -51,16 +51,16 @@ function checkAndUpdate($button) {
 	var $input = $button.find('input');
 	var totalChoice = $input.val();
 
-	$('.input_file_widget').each(function() {
+	$('.input-choice').each(function() {
 			var company_type_input = $(this).data('company-type');
 
 			if (typeof company_type_input !== 'undefined') {
 					if (totalChoice !== company_type_input) {
-							$(this).hide(); // Скрываем .input_file_widget, если значение не совпадает
+							$(this).attr('style','display:none !important');// Скрываем .input_file_widget, если значение не совпадает
 							$(this).find('input').prop('disabled', true);
 							$(this).find('input').val('');
 							$(this).removeClass('active');
-							$(this).find('label').text('Загрузить');
+							$(this).find('label.file_label').text('Загрузить');
 							$(this).find('.remove_file').remove();
 					} else {
 							$(this).show(); // Показываем .input_file_widget, если значение совпадает
@@ -114,7 +114,7 @@ $('.next_form').click(function() {
 	// Скрываем текущий fieldset плавно
  	currentFieldset.fadeOut('100', function() {
      nextFieldset.fadeIn('100');
- });
+  });
 });
 $('.verification_steps > div').click(function(){
 	$('.verification_steps > div').removeClass('active');
@@ -270,10 +270,11 @@ console.log('123')
   $activeBlock.slideDown();	$('.faq_widget_item').removeClass('active')
   $this.addClass('active');
 });
-
 $('.js-select-single').select2({
 	minimumResultsForSearch: -1,
 });
+
+
 
 $('.documents_widget_status').click(function(){
 	$(this).children().closest('.droplist_docs').toggleClass('active')
@@ -288,3 +289,4 @@ $(document).mouseup(function (e) {
 				 container1.toggleClass('active');
 		 }
 	 });
+	 document.getElementById('current').value = new Date().toISOString().substring(0, 10);
