@@ -123,7 +123,7 @@
 									<option value="">АО "Аммоний"</option>
 								</select>
 								<div class="input_search">
-									<input type="search" name="search_applications" placeholder="Поиск по номеру">
+									<input type="search" name="search_applications" placeholder="Поиск по номеру заказа">
 								</div>
 							</div>
 						</div>
@@ -181,7 +181,7 @@
 			<div class="container-fluid">
 				<div class="row align-items-center justify-content-between">
 					<div class="col-12">
-						<h2 class="section-title">История предыдущих заказов</h2>
+						<h2 class="section-title">Лидеры продаж</h2>
 					</div>
 				</div>
 				<div class="row">
@@ -194,7 +194,7 @@
 								<img src="images/creator.jpg" loading="lazy">
 								<span class="small light">АО "Аммоний"</span>
 							</div>
-							<div class="btn btn-accent  btn-large mt-3">Повторить</div>
+							<div class="btn btn-accent  btn-large mt-3">Оформить заявку</div>
 						</a>
 					</div>
 					<div class="col-lg-3">
@@ -206,7 +206,7 @@
 								<img src="images/creator.jpg" loading="lazy">
 								<span class="small light">АО "Аммоний"</span>
 							</div>
-							<div class="btn btn-accent  btn-large mt-3">Повторить</div>
+							<div class="btn btn-accent  btn-large mt-3">Оформить заявку</div>
 						</a>
 					</div>
 					<div class="col-lg-3">
@@ -218,7 +218,7 @@
 								<img src="images/creator.jpg" loading="lazy">
 								<span class="small light">АО "Аммоний"</span>
 							</div>
-							<div class="btn btn-accent btn-large mt-3">Повторить</div>
+							<div class="btn btn-accent btn-large mt-3">Оформить заявку</div>
 						</a>
 					</div>
 				</div>
@@ -300,10 +300,10 @@
 					</div>
 					<div class="form-group form-group-row d-flex align-items-center">
 						<div class="form-group">
-							<label for="">Объем, Т</label>
+							<label for="">Вес заказа, Т</label>
 							<div class="count_block">
 								<div class="minus">-</div>
-								<input type="number" value="100" min="10" max="1000" step="100">
+								<input type="number" value="0.05" min="0.05" max="0.05" step="0.05">
 								<div class="plus">+</div>
 							</div>
 						</div>
@@ -344,22 +344,37 @@
 					<div class="link_accent mt-3 mb-4">Добавить пункт выгрузки</div>
 					<hr>
 					<div class="four mb-3 mt-4 text-normal">Срок поставки</div>
+
 					<div>
-						<input type="hidden" name="company_type" value="Юридическое лицо">
-							<div class="d-flex justify-content-between">
-								<div class="choice_button choice_accent active">
-									<label for="company_choice1">До фиксированной даты</label>
-									<input type="radio" checked  name="company_item" value="Юридическое лицо" id="company_choice1">
-								</div>
-								<div class="choice_button choice_accent ">
-									<label for="company_choice2" name="company">Период поставки </label>
-									<input type="radio"   name="company_item" value="Индивидуальный предприниматель" id="company_choice2">
-								</div>
+						<input type="hidden" name="company_type" value="До фиксированной даты">
+						<div class="d-flex justify-content-between">
+							<div class="choice_button choice_accent active">
+								<label for="company_choice1">До фиксированной даты</label>
+								<input type="radio" checked name="company_item" value="До фиксированной даты" id="company_choice1">
 							</div>
+							<div class="choice_button choice_accent ">
+								<label for="company_choice2" name="company">Дата начала периода поставки </label>
+								<input type="radio" name="company_item" value="Дата начала периода поставки"
+									id="company_choice2">
+							</div>
+						</div>
 					</div>
-					<div class="form-group mt-2">
-						<input type="date" name="" id="">
-					</div>
+						<div class="form-group mt-2 d-flex input-choice" data-company-type="До фиксированной даты">
+							<div class="form-group mt-0">
+								<label for="">Дата окончания периода поставки</label>
+								<input type="date" name="" id="4">
+							</div>
+						</div>
+						<div class="form-group mt-2 d-flex input-choice" data-company-type="Дата начала периода поставки">
+							<div class="form-group">
+								<label for="">От какого числа поставка</label>
+								<input type="date" name="" id="current" disabled>
+							</div>
+							<div class="form-group mt-0">
+								<label for="">Дата окончания периода поставкии</label>
+								<input type="date" name="" id="4" disabled  style="border-left: none;">
+							</div>
+						</div>
 					<div class="d-flex justify-content-end mt-4">
 						<div class="btn btn-accent to-application-send">Отправить заявку</div>
 					</div>

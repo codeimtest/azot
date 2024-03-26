@@ -167,17 +167,20 @@
 									</div>
 									<div class="form-group form-group-row d-flex align-items-center">
 										<div class="form-group">
-											<label for="">Объем, Т</label>
+											<label for="">Вес заказа, Т</label>
 											<div class="count_block">
 												<div class="minus">-</div>
-												<input type="number" value="100" min="10" max="1000" step="100">
+												<input type="number" value="0.05" min="0.05" max="100" step="0.05">
 												<div class="plus">+</div>
 											</div>
 										</div>
 										<div class="form-group">
-											<label for="product_company_single">Поставщик</label>
+											<label for="product_company_single">Производитель</label>
 											<select name="" id="product_company_single" class="js-select-single">
-												<option value="Селитра аммиачная марки Б - АО “Аммоний”">ООО «Аммоний-Агро»</option>
+												<option value="Селитра аммиачная марки Б - АО “Аммоний”">АО "Аммоний"</option>
+												<option value="Селитра аммиачная марки Б - АО “Аммоний”">АО "Мелеузовские минеральные удобрения"</option>
+												<option value="Селитра аммиачная марки Б - АО “Аммоний”">КАО "АЗОТ"</option>
+												<option value="">Любой производитель</option>
 											</select>
 										</div>
 									</div>
@@ -200,15 +203,23 @@
 									</div>
 									<hr>
 									<div class="four mb-3 mt-4 text-normal">Способы доставки</div>
-									<div class="form-group select-group d-flex">
-										<select name="" id="" class="js-select-single">
-											<option value="">ЖД транспорт</option>
-										</select>
-										<select name="" id="" class="js-select-single">
-											<option value="">Москва-3</option>
-										</select>
+									<div class="form-group select-group d-flex ">
+										<div>
+											<label for=""><br></label>
+											<select name="" id="delivery_type" class="js-select-single">
+												<option value="ЖД">ЖД транспорт</option>
+												<option value="Самовывоз">Самовывоз авто</option>
+												<option value="Автодоставка">Автодоставка до места назначения</option>
+											</select>
+										</div>
+										<div class="w-100">
+											<label for="">Выбрать станцию назначения</label>
+											<select name="" id="delivery_type_list" class="js-select-single">
+												<option value="">Москва-3</option>
+											</select>
+										</div>
 									</div>
-									<div class="link_accent mt-3 mb-4">Добавить пункт выгрузки</div>
+									<div class="link_accent mt-3 mb-4">Добавить способ доставки</div>
 									<hr>
 									<div class="four mb-3 mt-4 text-normal">Срок поставки</div>
 									<div>
@@ -219,25 +230,25 @@
 												<input type="radio" checked name="company_item" value="До фиксированной даты" id="company_choice1">
 											</div>
 											<div class="choice_button choice_accent ">
-												<label for="company_choice2" name="company">Период поставки </label>
-												<input type="radio" name="company_item" value="Период поставки"
+												<label for="company_choice2" name="company">Дата начала периода поставки </label>
+												<input type="radio" name="company_item" value="Дата начала периода поставки"
 													id="company_choice2">
 											</div>
 										</div>
 									</div>
 										<div class="form-group mt-2 d-flex input-choice" data-company-type="До фиксированной даты">
 											<div class="form-group mt-0">
-												<label for="">Дата поставки</label>
+												<label for="">Дата окончания периода поставки</label>
 												<input type="date" name="" id="4">
 											</div>
 										</div>
-										<div class="form-group mt-2 d-flex input-choice" data-company-type="Период поставки">
+										<div class="form-group mt-2 d-flex input-choice" data-company-type="Дата начала периода поставки">
 											<div class="form-group">
 												<label for="">От какого числа поставка</label>
 												<input type="date" name="" id="current" disabled>
 											</div>
 											<div class="form-group mt-0">
-												<label for="">Дата поставки</label>
+												<label for="">Дата окончания периода поставкии</label>
 												<input type="date" name="" id="4" disabled  style="border-left: none;">
 											</div>
 										</div>
@@ -466,9 +477,9 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="product_send">Поставщик</label>
+								<label for="product_send">Производитель</label>
 								<select name="" id="product_company" class="js-select-single">
-									<option value="Селитра аммиачная марки Б - АО “Аммоний”">ООО «Аммоний-Агро»</option>
+									<option value="Селитра аммиачная марки Б - АО “Аммоний”">АО "Аммоний"</option>
 								</select>
 							</div>
 						</div>
@@ -544,8 +555,8 @@
 										<div>1 000 T</div>
 									</div>
 									<div class="ml-2">
-										<div class="less light">Поставщик</div>
-										<div>ООО "Аммоний-Агро"</div>
+										<div class="less light">Производитель</div>
+										<div>"АО "Аммоний"</div>
 									</div>
 								</div>
 							</div>

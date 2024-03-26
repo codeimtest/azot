@@ -446,7 +446,7 @@
 						<div class="d-flex align-items-center justify-content-between mt-5 mb-3">
 							<div>
 								<div class="three">Загрузить документы</div>
-							<div class="less mt-2">Здесь отображаются загруженные Вами документы</div>
+							<div class="less mt-2">Здесь отображаются загруженные вами документы (Доверенности, разнарядки, уставные документы и акты и пр.)</div>
 							</div>
 							<div>
 								<label for="input_docs" class="btn">Загрузить документ</label>
@@ -579,90 +579,105 @@
 				</div>
 			</div>
 		</footer>
-			<div class="popup for-profile">
-				<div class="popup-dialog">
-					<div class="popup-wrap">
-						<div class="btn-close close">
-							<img src="images/cancel.svg">
-						</div>
-						<div class="two mb-4">Оформление заявки</div>
-						<form action="">
-							<div class="form-group">
-								<label for="product_send">Выберите продукцию</label>
-								<select name="" id="product_send" class="js-select-single">
-									<option value="Селитра аммиачная марки Б - АО “Аммоний”">Селитра аммиачная марки Б - АО “Аммоний”</option>
-									<option value="Селитра аммиачная марки Б - АО “Аммоний”">Селитра аммиачная марки С - АО “Аммоний”</option>
-								</select>
-							</div>
-							<div class="form-group form-group-row d-flex align-items-center">
-								<div class="form-group">
-									<label for="">Объем, Т</label>
-									<div class="count_block">
-										<div class="minus">-</div>
-										<input type="number" value="100" min="10" max="1000" step="100">
-										<div class="plus">+</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="product_send">Поставщик</label>
-									<select name="" id="product_company" class="js-select-single">
-										<option value="Селитра аммиачная марки Б - АО “Аммоний”">ООО «Аммоний-Агро»</option>
-									</select>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="">Предпочтительные варианты упаковки</label>
-								<div class="checkbox_wrap">
-									<label class="checkbox">
-										<input type="checkbox" checked="" name="policy_check" id="policy_check" wfd-id="id12">
-										<span>МКР</span>
-										<span class="checkmark"></span>
-									</label>
-								</div>
-								<div class="checkbox_wrap">
-									<label class="checkbox">
-										<input type="checkbox" checked="" name="policy_check" id="policy_check" wfd-id="id12">
-										<span>Мешки 50 кг</span>
-										<span class="checkmark"></span>
-									</label>
-								</div>
-							</div>
-							<hr>
-							<div class="four mb-3 mt-4 text-normal">Способы доставки</div>
-							<div class="form-group select-group d-flex">
-								<select name="" id="" class="js-select-single">
-									<option value="">ЖД транспорт</option>
-								</select>
-								<select name="" id="" class="js-select-single">
-									<option value="">Москва-3</option>
-								</select>
-							</div>
-							<div class="link_accent mt-3 mb-4">Добавить пункт выгрузки</div>
-							<hr>
-							<div class="four mb-3 mt-4 text-normal">Срок поставки</div>
-							<div>
-								<input type="hidden" name="company_type" value="Юридическое лицо">
-									<div class="d-flex justify-content-between">
-										<div class="choice_button choice_accent active">
-											<label for="company_choice1">До фиксированной даты</label>
-											<input type="radio" checked  name="company_item" value="Юридическое лицо" id="company_choice1">
-										</div>
-										<div class="choice_button choice_accent ">
-											<label for="company_choice2" name="company">Период поставки </label>
-											<input type="radio"   name="company_item" value="Индивидуальный предприниматель" id="company_choice2">
-										</div>
-									</div>
-							</div>
-							<div class="form-group mt-2">
-								<input type="date" name="" id="">
-							</div>
-							<div class="d-flex justify-content-end mt-4">
-								<div class="btn btn-accent to-application-send">Отправить заявку</div>
-							</div>
-						</form>
+		<div class="popup for-profile">
+			<div class="popup-dialog">
+				<div class="popup-wrap">
+					<div class="btn-close close">
+						<img src="images/cancel.svg">
 					</div>
+					<div class="two mb-4">Оформление заявки</div>
+					<form action="">
+						<div class="form-group">
+							<label for="product_send">Выберите продукцию</label>
+							<select name="" id="product_send" class="js-select-single">
+								<option value="Селитра аммиачная марки Б - АО “Аммоний”">Селитра аммиачная марки Б - АО “Аммоний”</option>
+								<option value="Селитра аммиачная марки Б - АО “Аммоний”">Селитра аммиачная марки С - АО “Аммоний”</option>
+							</select>
+						</div>
+						<div class="form-group form-group-row d-flex align-items-center">
+							<div class="form-group">
+								<label for="">Вес заказа, Т</label>
+								<div class="count_block">
+									<div class="minus">-</div>
+									<input type="number" value="0.05" min="0.05" max="0.05" step="0.05">
+									<div class="plus">+</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="product_send">Поставщик</label>
+								<select name="" id="product_company" class="js-select-single">
+									<option value="Селитра аммиачная марки Б - АО “Аммоний”">ООО «Аммоний-Агро»</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="">Предпочтительные варианты упаковки</label>
+							<div class="checkbox_wrap">
+								<label class="checkbox">
+									<input type="checkbox" checked="" name="policy_check" id="policy_check" wfd-id="id12">
+									<span>МКР</span>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox_wrap">
+								<label class="checkbox">
+									<input type="checkbox" checked="" name="policy_check" id="policy_check" wfd-id="id12">
+									<span>Мешки 50 кг</span>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>
+						<hr>
+						<div class="four mb-3 mt-4 text-normal">Способы доставки</div>
+						<div class="form-group select-group d-flex">
+							<select name="" id="" class="js-select-single">
+								<option value="">ЖД транспорт</option>
+							</select>
+							<select name="" id="" class="js-select-single">
+								<option value="">Москва-3</option>
+							</select>
+						</div>
+						<div class="link_accent mt-3 mb-4">Добавить пункт выгрузки</div>
+						<hr>
+						<div class="four mb-3 mt-4 text-normal">Срок поставки</div>
+	
+						<div>
+							<input type="hidden" name="company_type" value="До фиксированной даты">
+							<div class="d-flex justify-content-between">
+								<div class="choice_button choice_accent active">
+									<label for="company_choice1">До фиксированной даты</label>
+									<input type="radio" checked name="company_item" value="До фиксированной даты" id="company_choice1">
+								</div>
+								<div class="choice_button choice_accent ">
+									<label for="company_choice2" name="company">Дата начала периода поставки </label>
+									<input type="radio" name="company_item" value="Дата начала периода поставки"
+										id="company_choice2">
+								</div>
+							</div>
+						</div>
+							<div class="form-group mt-2 d-flex input-choice" data-company-type="До фиксированной даты">
+								<div class="form-group mt-0">
+									<label for="">Дата окончания периода поставки</label>
+									<input type="date" name="" id="4">
+								</div>
+							</div>
+							<div class="form-group mt-2 d-flex input-choice" data-company-type="Дата начала периода поставки">
+								<div class="form-group">
+									<label for="">От какого числа поставка</label>
+									<input type="date" name="" id="current" disabled>
+								</div>
+								<div class="form-group mt-0">
+									<label for="">Дата окончания периода поставкии</label>
+									<input type="date" name="" id="4" disabled  style="border-left: none;">
+								</div>
+							</div>
+						<div class="d-flex justify-content-end mt-4">
+							<div class="btn btn-accent to-application-send">Отправить заявку</div>
+						</div>
+					</form>
 				</div>
 			</div>
+		</div>
 			<div class="popup for-application">
 				<div class="popup-dialog">
 					<div class="popup-wrap">
