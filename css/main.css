@@ -847,10 +847,16 @@ background-position: center center;
 .application_table > div{
 	width: 25%;
 }
+#delivery_type +  .select2-container{
+	min-width: 320px;
+}
+#delivery_type + .select2 .select2-selection--single{
+	border-left: var(--border) !important;
+}
  input[type="search"]{
 	background: var(--gray);
 	padding: 10px 36px 10px 36px;
-	min-width: 240px;
+	min-width: 270px;
 	position: relative;
 	border: var(--border);
 }

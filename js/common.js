@@ -212,34 +212,34 @@ $('.toggle_button_widget').click(function() {
 
 //other form items
 
-	$('.minus').click(function() {
-			var input = $(this).siblings('input[type="number"]');
-			var value = parseInt(input.val(), 10);
-			var min = parseInt(input.attr('min'), 10);
-			var step = parseInt(input.attr('step'), 10);
-			if (value > min) {
-					input.val(value - step);
-			}
-	});
+$('.minus').click(function() {
+	var input = $(this).siblings('input[type="number"]');
+	var value = parseFloat(input.val());
+	var min = parseFloat(input.attr('min'));
+	var step = parseFloat(input.attr('step'));
+	if (value > min) {
+			input.val((value - step).toFixed(2)); // Округляем до двух знаков после запятой
+	}
+});
 
-	$('.plus').click(function() {
-			var input = $(this).siblings('input[type="number"]');
-			var value = parseInt(input.val(), 10);
-			var max = parseInt(input.attr('max'), 10);
-			var step = parseInt(input.attr('step'), 10);
-			if (value + step <= max) {
-					input.val(value + step);
-			}
-	});
+$('.plus').click(function() {
+	var input = $(this).siblings('input[type="number"]');
+	var value = parseFloat(input.val());
+	var max = parseFloat(input.attr('max'));
+	var step = parseFloat(input.attr('step'));
+	if (value + step <= max) {
+			input.val((value + step).toFixed(2)); // Округляем до двух знаков после запятой
+	}
+});
 
-	$('input[type="number"]').on('input', function() {
-			var input = $(this);
-			var value = parseInt(input.val(), 10);
-			var max = parseInt(input.attr('max'), 10);
-			if (value > max) {
-					input.val(max);
-			}
-	});
+$('input[type="number"]').on('input', function() {
+	var input = $(this);
+	var value = parseFloat(input.val());
+	var max = parseFloat(input.attr('max'));
+	if (value > max) {
+			input.val(max.toFixed(2)); // Округляем до двух знаков после запятой
+	}
+});
 
 
 	// FAQ
@@ -270,6 +270,36 @@ console.log('123')
   $activeBlock.slideDown();	$('.faq_widget_item').removeClass('active')
   $this.addClass('active');
 });
+
+
+$('#delivery_type').change(function() {
+	var selectedValue = $(this).val();
+	var $secondSelect = $(this).closest('.select-group').find('#delivery_type_list');
+
+	// Очищаем второй селект от старых опций
+	$secondSelect.empty();
+
+	// В зависимости от выбранного значения первого селекта, добавляем нужные опции второму селекту
+	if (selectedValue === 'ЖД') {
+			$secondSelect.append($('<option>', {value: 'Москва-1', text: 'Москва-1'}));
+	}  else if (selectedValue === 'Автодоставка') {
+			$secondSelect.append($('<option>', {value: 'Автодоставка-1', text: 'Выбрать адрес доставки', disabled: 'disabled', selected: 'selected'}));
+			$secondSelect.append($('<option>', {value: 'Автодоставка-2', text: 'г. Менделеевск'}));
+	}else if (selectedValue === 'Самовывоз') {
+		$secondSelect.append($('<option>', {value: 'Самовывоз-1', text: 'Выбрать адрес самовывоза', disabled: 'disabled', selected: 'selected'}));
+		$secondSelect.append($('<option>', {value: 'Автодоставка-2', text: 'г. Менделеевск'}));
+}
+var $secondSelectLabel = $('#delivery_type_list').prev('label');
+
+// В зависимости от выбранного значения первого селекта, изменяем текст метки второго селекта
+if (selectedValue === 'ЖД') {
+		$secondSelectLabel.text('Выбрать станцию назначения');
+} else if (selectedValue === 'Самовывоз') {
+		$secondSelectLabel.text('Выбрать адрес доставки').css('opacity','0');
+} else if (selectedValue === 'Автодоставка') {
+		$secondSelectLabel.text('Выбрать адрес доставки');
+}
+});
 $('.js-select-single').select2({
 	minimumResultsForSearch: -1,
 });
@@ -289,4 +319,3 @@ $(document).mouseup(function (e) {
 				 container1.toggleClass('active');
 		 }
 	 });
-	 document.getElementById('current').value = new Date().toISOString().substring(0, 10);
