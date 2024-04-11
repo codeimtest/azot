@@ -238,6 +238,10 @@ label.btn{
 .btn-group > * + *{
 	margin-left: 12px;
 }
+header .btn-group{
+	display: flex;
+	align-items: center;
+}
 /* MAIN STYLES */
 
 .auth-page header,.verification-page header,.profile-page header,.application-page header{
@@ -714,7 +718,7 @@ form p{
 	font-size: 14px;
 	color: var(--lightext);
 	border: var(--border);
-	padding: 10px 22px;
+	padding: 10px 19px;
 	cursor: pointer;
 	text-align: center;
 	width: 100%;
@@ -848,11 +852,12 @@ background-position: center center;
 	width: 25%;
 }
 #delivery_type +  .select2-container{
-	min-width: 320px;
+	min-width: 292px;
 }
-#delivery_type + .select2 .select2-selection--single{
-	border-left: var(--border) !important;
+.select-group div:first-child  .select2:last-child .select2-selection--single{
+	border-left: var(--border);
 }
+
  input[type="search"]{
 	background: var(--gray);
 	padding: 10px 36px 10px 36px;
@@ -1380,6 +1385,9 @@ footer .copyright{
 body .select2-container{
 	width: 100% !important;
 }
+body .select2-container--default .select2-results__option--disabled{
+	font-size: 14px;
+}
 body .select2-container--default .select2-selection--single{
 	border-radius: 0;
 	border: var(--border)
@@ -1791,7 +1799,7 @@ body .catalog_filters .select2-container{
 	border: none;
 }
 .product_tabs{
-	min-height: 680px;
+	min-height: 780px;
 	padding-top: 40px;
 }
 .product_tabs > div:not(:first-of-type) {

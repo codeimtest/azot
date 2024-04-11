@@ -293,11 +293,11 @@ var $secondSelectLabel = $('#delivery_type_list').prev('label');
 
 // В зависимости от выбранного значения первого селекта, изменяем текст метки второго селекта
 if (selectedValue === 'ЖД') {
-		$secondSelectLabel.text('Выбрать станцию назначения');
+		$secondSelectLabel.text('Станция назначения').css('opacity','1');
 } else if (selectedValue === 'Самовывоз') {
-		$secondSelectLabel.text('Выбрать адрес доставки').css('opacity','0');
+		$secondSelectLabel.text('Самовывоз').css('opacity','0');
 } else if (selectedValue === 'Автодоставка') {
-		$secondSelectLabel.text('Выбрать адрес доставки');
+		$secondSelectLabel.text('Адрес доставки').css('opacity','1');
 }
 });
 $('.js-select-single').select2({

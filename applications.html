@@ -259,7 +259,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="/azot/profile.html">
+										<a href="/azot/password.html">
 											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0_1603_4832)">
 													<path
@@ -780,13 +780,21 @@
 						</div>
 						<hr>
 						<div class="four mb-3 mt-4 text-normal">Способы доставки</div>
-						<div class="form-group select-group d-flex">
-							<select name="" id="" class="js-select-single">
-								<option value="">ЖД транспорт</option>
-							</select>
-							<select name="" id="" class="js-select-single">
-								<option value="">Москва-3</option>
-							</select>
+						<div class="form-group select-group d-flex ">
+							<div>
+								<label for=""><br></label>
+								<select name="" id="delivery_type" class="js-select-single">
+									<option value="ЖД">ЖД транспорт</option>
+									<option value="Самовывоз">Самовывоз авто</option>
+									<option value="Автодоставка">Автодоставка до места назначения</option>
+								</select>
+							</div>
+							<div class="w-100">
+								<label for="">Станция назначения</label>
+								<select name="" id="delivery_type_list" class="js-select-single">
+									<option value="">Москва-3</option>
+								</select>
+							</div>
 						</div>
 						<div class="link_accent mt-3 mb-4">Добавить пункт выгрузки</div>
 						<hr>
@@ -814,7 +822,7 @@
 							</div>
 							<div class="form-group mt-2 d-flex input-choice" data-company-type="Дата начала периода поставки">
 								<div class="form-group">
-									<label for="">От какого числа поставка</label>
+									<label for="">Дата начала периода поставки</label>
 									<input type="date" name="" id="current" disabled>
 								</div>
 								<div class="form-group mt-0">

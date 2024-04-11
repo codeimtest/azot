@@ -209,12 +209,12 @@
 									</div>
 									<hr>
 									<div class="four mb-3 mt-4 text-normal">Способы доставки</div>
-									<div class="form-group select-group d-flex">
-										<select name="" id="" class="js-select-single">
-											<option value="">ЖД транспорт</option>
-										</select>
-										<select name="" id="" class="js-select-single">
-											<option value="">Москва-3</option>
+									<div>
+										<label for=""><br></label>
+										<select name="" id="delivery_type" class="js-select-single">
+											<option value="ЖД">ЖД транспорт</option>
+											<option value="Самовывоз">Самовывоз авто</option>
+											<option value="Автодоставка">Автодоставка до места назначения</option>
 										</select>
 									</div>
 									<div class="link_accent mt-3 mb-4">Добавить пункт выгрузки</div>
@@ -519,7 +519,7 @@
 							</div>
 							<div class="form-group mt-2 d-flex input-choice" data-company-type="Дата начала периода поставки">
 								<div class="form-group">
-									<label for="">От какого числа поставка</label>
+									<label for="">Дата начала периода поставки</label>
 									<input type="date" name="" id="current" disabled>
 								</div>
 								<div class="form-group mt-0">
