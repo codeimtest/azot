@@ -939,6 +939,15 @@ background-position: center center;
 	position: relative;
 	width: max-content;
 }
+.badget_lg{
+	padding: 8px 12px 8px 30px;
+}
+.badget.badget_lg.badget_check::before{
+	background-color: var(--accent);
+}
+.badget.badget_lg.badget_check{
+	background: rgba(57, 182, 53, 0.08);
+}
 .badget.badget_ready::before ~ div {
 	content: none;
 }
@@ -1217,6 +1226,33 @@ margin-left: 24px;
 }
 
 /* documents widget */
+.documents_download_item{
+	padding: 16px 0;
+	margin: 0 16px;
+	border-bottom: var(--border);
+}
+.documents_download_item span{
+	margin-right: 0;
+	margin-left: 8px;
+}
+.download_docs_choice svg{
+	margin-right: 8px;
+}
+.download_docs_choice{
+	cursor: pointer;
+}
+.download_docs_choice.active{
+	color: var(--accent);
+}
+.download_docs_choice.active svg path{
+	fill: var(--accent);
+}
+.documents_download_item:last-child{
+	border-bottom: none;
+}
+.documents_download{
+	border-top: var(--border)
+}
 .documents_widget:not(:first-of-type) {
 	display: none;
 }
@@ -1225,6 +1261,18 @@ margin-left: 24px;
 }
 .documents_widget_item{
 	border: var(--border);
+	background: #fff;
+}
+.documents_widget_item.ready{
+	background: #fff;
+}
+.documents_widget_item.signed .documents_widget_item_additional{
+	background: rgba(57, 182, 53, 0.08);
+}
+.documents_widget_item .documents_widget_item_additional{
+	background: rgba(60, 60, 60, 0.08);
+}
+.documents_widget_item.ready .documents_widget_item_additional{
 	background: #fff;
 }
 .documents_widget_item_meta{
@@ -1243,22 +1291,40 @@ margin-left: 24px;
 	background: var(--accent);
 }
 .documents_widget_item_additional{
-	background: rgba(60, 60, 60, 0.08);
 	padding: 16px;
 }
-.documents_widget_item.signed .documents_widget_item_additional{
-	background: rgba(57, 182, 53, 0.08);
+.documents_download_toggle span{
+	margin: 0 8px;
+}
+.documents_download_toggle{
+	cursor: pointer;
+	transition: var(--transition);
+}
+.documents_download_toggle.active img{
+	transform: rotate(180deg);
+}
+.documents_download_toggle .docs_count{
+	border-radius: 50%;
+	background: var(--gray);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 20px;
+	color: var(--lightext);
+	width: 24px;
 }
 .droplist_docs {
 	position: absolute;
 	background: #fff;
-	min-width: 280px;
+	min-width: 128px;
 	padding: 10px;
 	top: 40px;
+	right: -40px;
 	border: var(--border);
 	transition: var(--transition);
 	opacity: 0;
 	visibility: hidden;
+
 }
 .droplist_docs.active{
 	opacity: 1;

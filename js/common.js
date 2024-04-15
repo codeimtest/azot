@@ -281,11 +281,14 @@ $('#delivery_type').change(function() {
 
 	// В зависимости от выбранного значения первого селекта, добавляем нужные опции второму селекту
 	if (selectedValue === 'ЖД') {
+		$('#delivery_type_list').prop('disabled', false);
 			$secondSelect.append($('<option>', {value: 'Москва-1', text: 'Москва-1'}));
 	}  else if (selectedValue === 'Автодоставка') {
+		$('#delivery_type_list').prop('disabled', false);
 			$secondSelect.append($('<option>', {value: 'Автодоставка-1', text: 'Выбрать адрес доставки', disabled: 'disabled', selected: 'selected'}));
 			$secondSelect.append($('<option>', {value: 'Автодоставка-2', text: 'г. Менделеевск'}));
 	}else if (selectedValue === 'Самовывоз') {
+		$('#delivery_type_list').prop('disabled', true);
 		$secondSelect.append($('<option>', {value: 'Самовывоз-1', text: 'Выбрать адрес самовывоза', disabled: 'disabled', selected: 'selected'}));
 		$secondSelect.append($('<option>', {value: 'Автодоставка-2', text: 'г. Менделеевск'}));
 }
@@ -300,14 +303,14 @@ if (selectedValue === 'ЖД') {
 		$secondSelectLabel.text('Адрес доставки').css('opacity','1');
 }
 });
-$('.js-select-single').select2({
-	minimumResultsForSearch: -1,
-});
-
-
-
-$('.documents_widget_status').click(function(){
-	$(this).children().closest('.droplist_docs').toggleClass('active')
+$('.documents_download').attr('style','display:none !important');
+$('.documents_download_toggle').click(function(){
+	$(this).toggleClass('active')
+	$(this).parent().parent().next().slideToggle(100)
+})
+$('.download_docs_choice').click(function(){
+	$(this).toggleClass('active')
+	$(this).next().closest('.droplist_docs').toggleClass('active')
 })
 $(document).mouseup(function (e) {
 	var container1 = $(".droplist_docs");
@@ -315,7 +318,17 @@ $(document).mouseup(function (e) {
 	// Если цель клика не является контейнером и не является дочерним элементом контейнера
 	if (!container1.is(e.target) && container1.has(e.target).length === 0) {
 				 container1.removeClass('active');
+				 $('.download_docs_choice').removeClass('active')
 		 } else { 
 				 container1.toggleClass('active');
+				 
 		 }
 	 });
+$('.js-select-single').select2({
+	minimumResultsForSearch: -1,
+});
+
+
+
+
+
